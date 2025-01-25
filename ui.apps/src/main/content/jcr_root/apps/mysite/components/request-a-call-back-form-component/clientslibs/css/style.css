@@ -140,7 +140,7 @@ line-height: 15px;
 }
 
 .form-container a {
-    color: #FD5050;
+    color: #DA291C;
     text-decoration: none;
 }
 
@@ -152,8 +152,8 @@ line-height: 15px;
     .form-container {
         background-color: #282828;
         padding: 30px 1rem;
-        min-width: 320px;
-        width: 100%;
+        min-width: unset;
+        width: auto;
         height: 526px;
         position: relative;
         /* top: 99px; */

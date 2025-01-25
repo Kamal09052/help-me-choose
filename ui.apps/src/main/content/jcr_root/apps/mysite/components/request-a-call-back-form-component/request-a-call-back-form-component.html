@@ -20,10 +20,17 @@
                     <div class="allFields">
                         <div class="form-group">
                             <label for="fullName">${model.nameLabel}</label>
-                            <input type="text" id="fullName" class="inputformdata" name="fullName" required
+                            <input type="text" id="firstName" class="inputformdata" name="firstName" required
                                 placeholder="${model.namePlaceholder}" oninput="validateFullName(this)"
                                 pattern="[A-Za-z\s]+" title="Please enter only letters.">
                             <span class="error-message" id="nameError" style="color: red;"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullName">Last Name</label>
+                            <input type="text" id="lastName" class="inputformdata" name="lastName" required
+                                placeholder="Last Name" oninput="validateFullName(this)"
+                                pattern="[A-Za-z\s]+" title="Please enter only letters.">
+                            <span class="error-message" id="lastError" style="color: red;"></span>
                         </div>
                         <div class="form-group">
                             <label for="phoneNumber">${model.phoneLabel}</label>
