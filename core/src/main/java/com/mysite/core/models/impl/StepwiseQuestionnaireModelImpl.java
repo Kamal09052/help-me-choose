@@ -39,6 +39,34 @@ public class StepwiseQuestionnaireModelImpl implements StepwiseQuestionnaireMode
     @ValueMapValue
     private String draggableIcon;
 
+    @ValueMapValue
+    private String stepOneNextButtonCtaLabel;
+
+    @ValueMapValue
+    private String stepTwoNextButtonCtaLabel;
+
+    @ValueMapValue
+    private String stepTwoBackButtonCtaLabel;
+
+    @ValueMapValue
+    private String stepThreeBackButtonCtaLabel;
+
+    @ValueMapValue
+    private String stepThreeNextButtonCtaLabel;
+
+    @ValueMapValue
+    private String stepFourBackButtonCtaLabel;
+
+    @ValueMapValue
+    private String stepFourNextButtonCtaLabel;
+
+    @ValueMapValue
+    private String stepFiveNextButtonCtaLabel;
+
+
+    @ValueMapValue
+    private String stepFiveBackButtonCtaLabel;
+
     @Override
     public String getQuestion() {
         return question;
@@ -69,6 +97,7 @@ public class StepwiseQuestionnaireModelImpl implements StepwiseQuestionnaireMode
                 itemData.put("index", String.valueOf(i++)); // Store index as a String
                 itemData.put("answers", answer);
                 itemData.put("motorcycleRankingImage", resource.getValueMap().get("motorcycleRankingImage", String.class));
+                itemData.put("motorcycleRankingDesktopImage", resource.getValueMap().get("motorcycleRankingDesktopImage", String.class));
                 answers.add(itemData);
             }
         }
@@ -83,6 +112,7 @@ public class StepwiseQuestionnaireModelImpl implements StepwiseQuestionnaireMode
                 Map<String, String> itemData = new HashMap<>();
                 itemData.put("checkbox", resource.getValueMap().get("checkbox", String.class));
                 itemData.put("pillionFrequencyImage", resource.getValueMap().get("pillionFrequencyImage", String.class));
+                itemData.put("pillionFrequencyDesktopImage", resource.getValueMap().get("pillionFrequencyDesktopImage", String.class));
                 screen2Answers.add(itemData);
             }
         }
@@ -113,6 +143,7 @@ public class StepwiseQuestionnaireModelImpl implements StepwiseQuestionnaireMode
             for (Resource resource : screen4.getChildren()) {
                 Map<String, String> itemData = new HashMap<>();
                 itemData.put("ridingPosition", resource.getValueMap().get("ridingPosition", String.class));
+                itemData.put("ridingPositionDesktopImage", resource.getValueMap().get("ridingPositionDesktopImage", String.class));
                 itemData.put("ridingPositionShowingNameKey", resource.getValueMap().get("ridingPositionShowingNameKey", String.class));
                 itemData.put("ridingPositionShowingNameValue", resource.getValueMap().get("ridingPositionShowingNameValue", String.class));
 
@@ -124,6 +155,51 @@ public class StepwiseQuestionnaireModelImpl implements StepwiseQuestionnaireMode
     }
 
     @Override
+    public String getStepOneNextButtonCtaLabel() {
+        return stepOneNextButtonCtaLabel;
+    }
+
+    @Override
+    public String getStepTwoBackButtonCtaLabel() {
+        return stepTwoBackButtonCtaLabel;
+    }
+
+    @Override
+    public String getStepTwoNextButtonCtaLabel() {
+        return stepTwoNextButtonCtaLabel;
+    }
+
+    @Override
+    public String getStepThreeNextButtonCtaLabel() {
+        return stepThreeNextButtonCtaLabel;
+    }
+
+    @Override
+    public String getStepThreeBackButtonCtaLabel() {
+        return stepThreeBackButtonCtaLabel;
+    }
+
+    @Override
+    public String getStepFourNextButtonCtaLabel() {
+        return stepFourNextButtonCtaLabel;
+    }
+
+    @Override
+    public String getStepFourBackButtonCtaLabel() {
+        return stepFourBackButtonCtaLabel;
+    }
+
+    @Override
+    public String getStepFiveBackButtonCtaLabel() {
+        return stepFiveBackButtonCtaLabel;
+    }
+
+    @Override
+    public String getStepFiveNextButtonCtaLabel() {
+        return stepFiveNextButtonCtaLabel;
+    }
+
+    @Override
     public List<ImageEntity> getScreen3Answers(){
         List<ImageEntity> optionWithImages = new ArrayList<>();
         if(screen3 != null && screen3.hasChildren()){
@@ -132,7 +208,8 @@ public class StepwiseQuestionnaireModelImpl implements StepwiseQuestionnaireMode
                 Resource placeToRideResource = placeToRideIterator.next();
                 String optionText = placeToRideResource.getValueMap().get("option3", String.class);
                 String backgroundiMageURL = placeToRideResource.getValueMap().get("images",String.class);
-                optionWithImages.add(new ImageEntity(optionText,backgroundiMageURL));
+                String optionImageForDesktop = placeToRideResource.getValueMap().get("optionImageForDesktop",String.class);
+                optionWithImages.add(new ImageEntity(optionText,backgroundiMageURL,optionImageForDesktop));
             }
         }
         return optionWithImages;

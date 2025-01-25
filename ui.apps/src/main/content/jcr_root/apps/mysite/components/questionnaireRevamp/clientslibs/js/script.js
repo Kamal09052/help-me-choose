@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(document).ready(function () {
         function updateNumbers($sortable) {
             $sortable.find(".answer-container").each(function (index) {
-                $(this).find(".answer-id-box").text('#' + (index + 1));
+                $(this).find(".answer-id-box").text('0' + (index + 1));
             });
             // console.log("dsgsdj");
         }
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    setupImageSelection('#section4', 1, 3);
+    setupImageSelection('#section4', 1, 2);
     // setupImageSelection('#section5', 4, 20);
 
 

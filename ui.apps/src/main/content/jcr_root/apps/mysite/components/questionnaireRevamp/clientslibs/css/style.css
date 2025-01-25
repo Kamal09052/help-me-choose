@@ -13,7 +13,7 @@ li {
 
 body,
 html {
-    background-color: #181818;
+    background-color: #000000;
     font-family: "Montserrat", sans-serif;
     /* height: 100%; */
     margin: 0;
@@ -26,17 +26,29 @@ main.container {
 }
 
 .help-me-choose {
-    width: 278px;
-    height: 34px;
-    color: #aaa;
-    font-weight: bold;
+    font-family: "GuardianSans";
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.help-me-choose .steps{
     font-family: "Montserrat";
-
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    border-left: 1px solid #373737;
+    padding-left: 16px;
+    margin-left: 16px;
 }
 
 .upperside {
-    width: 560px;
-    height: 127px;
+    /* width: 560px;
+    height: 127px; */
 
 }
 
@@ -50,18 +62,13 @@ main.container {
     font-weight: 600;
 }
 
-.section-one {
-    min-height: 591px;
-    display: flex;
-    justify-content: center;
-
-
-}
+/* .section-one {
+    
+} */
 
 .main-div {
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
 }
 
 .option-item {
@@ -72,7 +79,7 @@ main.container {
 
 .container-basic {
     display: flex;
-    width: 560px;
+    /* width: 560px; */
     flex-direction: column;
     gap: 18px;
 }
@@ -87,15 +94,15 @@ main.container {
 
 .questionnaire-section {
     display: none;
-    width: 654px;
+    /* width: 654px; */
     /* height: 360px; */
     margin: 16px auto;
 
 }
 
 .bgImg {
-    width: 654px;
-    height: 880px;
+    /* width: 654px; */
+    /* height: 880px; */
 }
 
 
@@ -116,7 +123,7 @@ main.container {
 }
 
 .draggableOptions {
-    width: 560px;
+    /* width: 560px; */
 
     display: flex;
 }
@@ -156,16 +163,30 @@ main.container {
     background-color: #FFFFFF;
     border-radius: 20px;
     margin-top: 9px;
+
+    background-color: unset;
+    width: unset;
+    border-bottom: 1px solid #373737;
+    height: unset;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #fff;
+    margin-top: unset;
+    margin-left: auto;
+    border-radius: unset;
+    margin-right: 18px;
 }
 
 .option-item {
     cursor: pointer;
-    width: 560px;
+    /* width: 560px; */
 }
 
 
 .questionnaire-section li {
-    width: 496px;
+    /* width: 496px; */
     height: 58px;
     background-color: #333;
     cursor: move;
@@ -184,7 +205,7 @@ main.container {
 
 .answer-container {
     display: flex;
-    width: 560px;
+    /* width: 560px; */
     height: 75px;
     gap: 22px;
 
@@ -196,7 +217,7 @@ main.container {
 }
 
 .answer-section {
-    width: 95%;
+    /* width: 95%; */
 }
 
 .option-item.selectedd {
@@ -259,8 +280,8 @@ input[type="checkbox"]:checked::before {
     top: 6px;
     left: 11px;
     gap: 0px;
-    color: #000;
-    border: solid #000;
+    color: #181818;
+    border: solid #181818;
     border-width: 0px 3px 3px 0;
     transform: rotate(45deg);
 }
@@ -285,7 +306,7 @@ input[type="checkbox"]:checked::before {
 .buttton-container {
     display: flex;
     justify-content: space-between;
-    width: 560px;
+    /* width: 560px; */
     gap: 10px;
     margin-top: 23px;
 }
@@ -299,7 +320,7 @@ input[type="checkbox"]:checked::before {
 } */
 
 .button-container {
-    width: 495px;
+    /* width: 495px; */
 }
 
 .first {
@@ -913,11 +934,10 @@ input[type="checkbox"]:checked::before {
 }
 
 .section-title {
-    text-align: center;
+    text-align: left;
     font-size: 24px;
-    margin-bottom: 30px;
-    text-transform: uppercase;
     color: #fff;
+    margin-bottom: 1vh;
 }
 
 .bike-cards {
@@ -1007,9 +1027,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .bike-info {
-    position: relative;
-    text-align: center;
-    top: 35px;
+    margin-top: 2vh;
 }
 
 .bike-name {
@@ -1069,12 +1087,51 @@ input[type="checkbox"]:checked::before {
     align-items: center;
     justify-content: center;
 }
+/* above mobile */
+@media(min-width:767px){
+    .main-div{
+        margin: auto;
+        max-width: 42.778vw;
+        width: 100%;
+        background-color: #181818;
+    }
+    
+}
+
+@media(min-width:767px) and (max-width:1024px){
+    .main-div{
+        max-width:64.167vw;
+    }
+}
+
 
 @media (max-width: 767px) {
+    .section2-banner-img
+    {
+        width: 345px !important;
+    }
+    .answer-container
+    {
+        height: 140px !important;
+        overflow: hidden;
+        margin-bottom: 1vh;
+    }
+    .sortable-item
+    {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .content-cotainer
+    {
+        margin-top: 3vh;
+    }
     .main-div {
         width: 100%;
-        display: block;
-        margin-top: 20px;
+        display: flex;
+        margin-top: 0;
+        min-height: 100vh;
+        padding-top: 5vh;
+        background-color: black;
     }
 
     body {
@@ -1085,6 +1142,7 @@ input[type="checkbox"]:checked::before {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        /* overflow-y: scroll; */
     }
 
 
@@ -1092,38 +1150,43 @@ input[type="checkbox"]:checked::before {
 
     /* For small mobile devices (portrait) */
     .help-me-choose {
-
+        font-family:"GuardianSans";
         width: 100%;
-        height: 34px;
-        font-size: 16px;
+        font-size: 24px;
         font-weight: 600;
-        color: #FFFFFF99;
+        color: #FFFFFF;
         line-height: 22.4px;
+        margin-bottom: 1.5rem;
 
         /* background-color: blue; */
     }
 
     /* steps changes */
     .help-me-choose .steps {
-        font-size: 16px;
+        font-family: "Montserrat";
+        font-size: 14px;
         font-weight: 400;
-        line-height: 22.4px;
+        line-height: 21px;
+    }
+    .help-me-choose .steps span{
+        color: #4F4F4F;
+        margin-left: 5px;
     }
 
     .upperside {
-        width: 327px;
-        height: 129px;
-
+        height: fit-content;
         gap: 8px;
     }
 
     .question {
+        font-family: "Montserrat";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
         width: fit-content;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 23.9px;
         letter-spacing: 0.002em;
-        margin-bottom: 2rem;
+        margin-bottom: 12px;
+        height: fit-content;
     }
 
     .double {
@@ -1144,16 +1207,18 @@ input[type="checkbox"]:checked::before {
 
     .drag-to-rearrange {
         font-family: 'Montserrat' !important;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19.12px;
         letter-spacing: 0.002em;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 12px;
         text-align: left;
+        color: #A6A6A6;
     }
 
     .draggableOptions {
         width: fit-content;
-        height: 333px;
+        /* height: 333px; */
         display: flex;
         /* margin: 15px; */
         align-items: baseline;
@@ -1191,17 +1256,16 @@ input[type="checkbox"]:checked::before {
     }
 
     .questionnaire-section {
-        background-size: 100% 100%;
-        background-position: 30% left;
-        background-repeat: no-repeat;
-        height: fit-content;
-        display: none;
-        color: white;
+        /* height: 140vh; */
+        padding-bottom: 20vh;
         width: 345px;
-        margin: 58px auto;
+        margin: 0;
         border-radius: 8px;
     }
 
+   #section4.questionnaire-section{
+    padding-bottom: 0px;
+   }
     .questionnaire-section .selectText {
         width: 100%;
     }
@@ -1339,7 +1403,7 @@ input[type="checkbox"]:checked::before {
     }
 
     .nameAndImgDiv {
-        width: 300px;
+        padding: 1vh 3vw;
     }
 
     /********* Second screen ***************/
@@ -1378,16 +1442,9 @@ input[type="checkbox"]:checked::before {
 
     .image-grid {
         display: flex;
-        flex-wrap: wrap;
         gap: 16px;
-        max-height: 324px;
         flex-wrap: wrap;
-        padding-top: 20px;
-        overflow-y: auto;
         width: 100%;
-        padding-bottom: 20px;
-        margin-top: 65px;
-        scrollbar-width: none;
     }
 
     #section4 .image-card {
@@ -1423,9 +1480,9 @@ input[type="checkbox"]:checked::before {
         height: 96px;
     }
 
-    #section5 .image-card img {
+    #section5 .image-card img.img-info {
         width: 100%;
-        height: auto;
+        height: 98px;
         display: block;
         transition: box-shadow 0.3s ease;
     }
@@ -1490,31 +1547,29 @@ input[type="checkbox"]:checked::before {
     /*************** for final screen *********************/
 
     .section-title {
-        text-align: center;
-        font-size: 13px;
-        /* margin-bottom: 30px; */
-        margin-top: 1rem;
-        /* text-transform: uppercase; */
+        text-align: left;
+        font-size: 24px;
+        line-height: 28px;
+        width: 327px;
         color: #fff;
+        font-weight: 600;
+        margin: 0 auto 0vh auto;
+        font-family: 'GuardianSans' !important;
     }
 
     .main-background {
-        background-size: 142%;
-        background-position: center;
-        background-repeat: no-repeat;
         margin: 0;
-        /* height: auto; */
-        width: 340px;
-        overflow-y: auto;
-        /* margin-left: -99px; */
-        color: #fff;
+        width: 375px;
+        /* overflow-y: auto; */
+        background: none !important;
+        padding: 0;
     }
 
     .bike-tabs {
         display: flex;
         justify-content: flex-start;
-        margin-top: 20px;
-        padding: 10px 16px;
+        /* margin-top: 20px;
+        padding: 10px 16px; */
         /* border-bottom: 2px solid #ff0000; */
 
     }
@@ -1522,7 +1577,7 @@ input[type="checkbox"]:checked::before {
     .bike-card {
         padding: 10px;
         width: fit-content;
-        height: 505px;
+        height: 530px;
 
     }
 
@@ -1562,24 +1617,24 @@ input[type="checkbox"]:checked::before {
     }
 
     .bike-cards {
-        margin-top: 7.5rem;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        /* overflow-y: auto; */
-
+        height: 73vh;
+        overflow-y: scroll;
+        justify-content: flex-start;
     }
 
     .bike-tab {
-        color: #fff;
-        font-weight: bold;
+        color: #A6A6A6;
+        font-weight: 300;
         /* padding: 10px; */
         cursor: pointer;
         flex: 1;
         text-align: center;
         border-bottom: 2px solid transparent;
-        padding-bottom: 15px;
-
+        padding: 15px 0;
+        font-size: 12px;
     }
 
     .bike-tab.active {
@@ -1592,6 +1647,7 @@ input[type="checkbox"]:checked::before {
         /* text-decoration: underline; */
         font-weight: bold;
         border-color: red;
+        color: white;
     }
 
     .bike-tab.highlighted::after {
@@ -1645,14 +1701,10 @@ input[type="checkbox"]:checked::before {
     }
 
     .fixedPart {
-        position: fixed;
-        /* margin-bottom: 3rem; */
-        z-index: 999;
-        background: #282828;
-        top: 1px;
+        display: flex;
         width: 100%;
-        left: 1px;
-
+        margin-bottom: 1vh;
+        flex-direction: column;
     }
 }
 
@@ -1685,9 +1737,9 @@ input[type="checkbox"]:checked::before {
 
 /*changes */
 .questionnaire-section {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+    /* overflow-y: scroll; */
+    /* scroll-behavior: smooth;
+    scrollbar-width: none; */
 }
 
 .sortable.answers.ui-sortable {
@@ -1701,6 +1753,7 @@ input[type="checkbox"]:checked::before {
     height: unset;
     padding: unset;
     padding-top: 12px;
+    box-sizing: border-box;
 }
 
 #questionnaire .answer-container,
@@ -1715,6 +1768,12 @@ input[type="checkbox"]:checked::before {
     display: flex;
     flex-direction: row;
     height: auto;
+font-family: "Montserrat";
+font-size: 12px;
+font-weight: 600;
+line-height: 17px;
+color: #ffffff;
+
 }
 
 #questionnaire li img,
@@ -1750,12 +1809,14 @@ input[type="checkbox"]:checked::before {
 
     .container-basic {
         padding: unset;
+        height: 100%;
     }
 
     #questionnaire .answer-id-box,
     #section3 .answer-id-box {
         background-color: unset;
         width: unset;
+        border-bottom: 1px solid #373737;
         height: unset;
         font-family: "Montserrat";
         font-size: 14px;
@@ -1764,13 +1825,13 @@ input[type="checkbox"]:checked::before {
         color: #fff;
         margin-top: unset;
         margin-left: auto;
-        padding-right: 18px;
+        border-radius: unset;
+        margin-right: 18px;
     }
 
     .draggableOptions {
         width: 100%;
     }
-
     .answer-section {
         height: auto;
         width: 100%;
@@ -1818,7 +1879,7 @@ input[type="checkbox"]:checked::before {
 .image-selected-checkbox input[type="checkbox"] {
     width: 24px;
     height: 24px;
-    border-radius: 1px;
+    border-radius: 3px;
     border: 2px solid #ededed;
 
 }
@@ -2004,4 +2065,16 @@ input[type="checkbox"]:checked::before {
 .next {
     background: linear-gradient(112.38deg, rgba(255, 255, 255, 0.5) -120.84%, rgba(255, 255, 255, 0.1) 79.67%);
 
+}
+
+.sortable {
+    overflow-x: auto; /* Enable horizontal scrolling for the container */
+    touch-action: pan-y; /* Allow vertical scrolling on touch devices */
+}
+
+.bike-inner-card{
+    display: none;
+}
+.bike-inner-card.active{
+display: block;
 }

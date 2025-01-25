@@ -9,16 +9,27 @@ let currentStep = 1;
 
 $(document).ready(function () {
     $(".sortable").sortable({
+         containment: "parent",      
+         cancel: ".non-draggable",    
         update: function (event, ui) {
-            updateNumber($(this));
+            updateNumber($(this)); 
+        },
+        start: function (event, ui) {
+            // Prevent accidental scrolling on drag start
+            $(this).css("touch-action", "none");
+        },
+        stop: function (event, ui) {
+            // Restore touch scrolling after drag ends
+            $(this).css("touch-action", "pan-y");
         }
     });
+
     $(".sortable").disableSelection();
 });
 
 function updateNumber($sortable) {
     $sortable.find(".answer-container").each(function (index) {
-        $(this).find(".answer-id-box").text('#' + (index + 1));
+        $(this).find(".answer-id-box").text('0' + (index + 1));
     });
 }
 
@@ -313,6 +324,7 @@ function callFourthApi(response) {
 
             const html = template(context);
             document.getElementById('main-section').innerHTML = html;
+            initializeBikeTabs();
             // Initialize Test Ride Buttons and Form
             const testRideButtons = document.querySelectorAll(".test-ride-btn");
             const formOverlay = document.getElementById("test-ride-form");
@@ -367,6 +379,37 @@ function callFourthApi(response) {
             console.error("Error in fourth API:", error);
         }
     });
+}
+
+function initializeBikeTabs() {
+    const tabs = document.querySelectorAll(".bike-tab");
+    const cards = document.querySelectorAll(".bike-inner-card");
+
+    // Function to switch the active tab and card
+    const switchTab = (selectedTab) => {
+        const bikeId = selectedTab.dataset.bikeId;
+
+        // Remove the 'active' class from all tabs and cards
+        tabs.forEach(tab => tab.classList.remove("active"));
+        cards.forEach(card => card.classList.remove("active"));
+
+        // Add the 'active' class to the selected tab and the corresponding card
+        selectedTab.classList.add("active");
+        document.getElementById(bikeId).classList.add("active");
+    };
+
+    // Add event listeners to all tabs
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+            switchTab(this);
+        });
+    });
+
+    // Set the first tab and card as active by default
+    if (tabs.length > 0 && cards.length > 0) {
+        tabs[0].classList.add("active");
+        cards[0].classList.add("active");
+    }
 }
 
 $(document).ready(function () {

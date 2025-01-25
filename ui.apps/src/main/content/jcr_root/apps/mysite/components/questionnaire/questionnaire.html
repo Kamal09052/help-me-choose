@@ -201,7 +201,7 @@
     </div>
     <div class="bike-cards" id="bike-cards-container">
         {{#each bikes}}
-            <div class="bike-inner-card" id="bike-{{@index}}">
+        <div class="bike-inner-card {{#if @first}}active{{/if}}" id="bike-{{@index}}">
                 <div>
                     <div class="bike-card">
                         <div class="nameAndImgDiv">

@@ -9,8 +9,12 @@
         <div id="test-ride-form" class="form-overlay" style="display: none;">
             <div class="form-container">
                 <div class="navigateBtn"></div>
-                <h2>${model.formLabel}</h2>
-                <button class="close-btn" aria-label="Close">&times;</button>
+                <div class="heading-and-btn-container">
+                    <h2 class="model-title">${model.formLabel}</h2>
+                    <button class="close-btn" aria-label="Close"><img src="/content/dam/mysite/icons/close.png" alt="close"></button>
+                </div>
+                
+                
                 <form id="callbackForm" action="/bin/book-a-test-ride-servlet" method="get"
                     onsubmit="return validateForm()">
                     <div class="allFields">

@@ -74,7 +74,25 @@ public interface StepwiseQuestionnaireModel {
 
 
 
+//    back and next button of till step five
 
+    String getStepOneNextButtonCtaLabel();
+
+    String getStepTwoBackButtonCtaLabel();
+
+    String getStepTwoNextButtonCtaLabel();
+
+    String getStepThreeNextButtonCtaLabel();
+
+    String getStepThreeBackButtonCtaLabel();
+
+    String getStepFourNextButtonCtaLabel();
+
+    String getStepFourBackButtonCtaLabel();
+
+    String getStepFiveBackButtonCtaLabel();
+
+    String getStepFiveNextButtonCtaLabel();
 
 
 }

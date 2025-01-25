@@ -43,13 +43,8 @@
 }
 
 .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
     background: none;
     border: none;
-    color: #fff;
-    font-size: 33px;
     cursor: pointer;
     /* margin-top: 0.5rem; */
 }
@@ -69,8 +64,10 @@
 .form-group input[type="text"],
 .form-group input[type="tel"],
 .form-group input[type="email"] {
+    font-weight:400;
+    font-family: "Montserrat";
     width: 470px;
-    padding: 10px;
+    padding: 14px;
     border-radius: 4px;
     border: 1px solid #333;
     background-color: #333;
@@ -153,10 +150,10 @@ line-height: 15px;
 
 @media (max-width: 768px)  {
     .form-container {
-        background-color: #1a1a1a;
-        padding: 30px;
-        border-radius: 8px;
-        width: 320px;
+        background-color: #282828;
+        padding: 30px 1rem;
+        min-width: 320px;
+        width: 100%;
         height: 526px;
         position: relative;
         /* top: 99px; */
@@ -170,6 +167,7 @@ line-height: 15px;
         scroll-margin: 0;
         scrollbar-width: none;
         margin-bottom: 100px;
+        border-radius: unset;
     }
     .navigateBtn{
         width: 34px;
@@ -206,23 +204,22 @@ text-align: left;
     }
 
     .allFields {
-        width: 316px;
+        width: inherit;
         height: auto !important;
     }
     .form-group input[type="text"],
     .form-group input[type="tel"],
     .form-group input[type="email"] {
-        width: 294px;
         /* padding: 10px; */
-        border-radius: 4px;
+        border-radius: unset;
         background-color: #282828;
         border: 1px solid #474747;
-
+        width: -webkit-fill-available;
 color: #fff;;
 font-family:"Montserrat";
-font-size: 16px;
+font-size: 14px;
 font-weight: 400;
-line-height: 22.4px;
+line-height: 21px;
 letter-spacing: 0.002em;
 text-align: left;
     }
@@ -235,9 +232,6 @@ line-height: 19.6px;
 letter-spacing: 0.02em;
 text-align: left;
 color: #FFFFFF;
-    }
-    .close-btn {
-        display: none;
     }
 }
 
@@ -329,13 +323,42 @@ color: #FFFFFF;
   #CoduntryCode{
     border: 1px solid #474747;
     color: #FFFFFF;
-font-family: "Montserrat";
-font-size: 14px;
-font-weight: 600;
-line-height: 19.6px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-background-color: #282828;
-padding: 10px 0px;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background-color: #282828;
+    padding: 15.5px 0px;
+    border-right: unset;
+    position: relative;
   }
+
+  #CoduntryCode::after{
+    content: " ";
+    position: absolute;
+    border-right:1px solid #474747;
+  }
+  .form-group input[type="tel"]{
+    border-left: unset;
+  }
+  .model-title{
+    font-family: "GuardianSans";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+
+  #test-ride-form #callbackForm{
+    width: inherit;
+  }
+
+  .heading-and-btn-container{
+    display: flex;
+        width: 100%;
+        align-items: flex-start;
+  }
+
