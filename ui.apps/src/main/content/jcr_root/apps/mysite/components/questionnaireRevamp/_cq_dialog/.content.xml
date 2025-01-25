@@ -32,6 +32,12 @@
                                                 fieldDescription="Rank Options"
                                                 fieldLabel="Use Case Ranking"
                                                 name="./question"/>
+                                            <stepOneNextButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of next button cta"
+                                                fieldLabel="Next Button Cta Label"
+                                                name="./stepOneNextButtonCtaLabel"/>    
                                             <questionnaire_options_multifield
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
@@ -57,7 +63,14 @@
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
                                                                     fieldLabel="Motorcycle Ranking Images"
-                                                                    name="./motorcycleRankingImage"/>    
+                                                                    name="./motorcycleRankingImage"/>
+                                                                <motorcycleRankingDesktopImage
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldLabel="Motorcycle Ranking Desktop Image"
+                                                                    fieldDescription="Please select image path for motorcycle Ranking Desktop Image." 
+                                                                    rootPath="/content/dam" 
+                                                                    name="./motorcycleRankingDesktopImage"/>         
                                                             </items>
                                                         </column>
                                                     </items>
@@ -88,6 +101,18 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Frequency of Riding with Pillion"
                                                 name="./question2"/>
+                                            <stepTwoNextButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of next button cta step two"
+                                                fieldLabel="Next Button Cta Label"
+                                                name="./stepTwoNextButtonCtaLabel"/>
+                                            <stepTwoBackButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of back button cta step two"
+                                                fieldLabel="Back Button Cta Label"
+                                                name="./stepTwoBackButtonCtaLabel"/>          
                                             <questionnaire_options_multifield
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
@@ -112,7 +137,16 @@
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
                                                                     fieldLabel="Pillion Frequency Image"
-                                                                    name="./pillionFrequencyImage"/>    
+                                                                    fieldDescription="Please select image path for pillion frequency mobile Image." 
+                                                                    rootPath="/content/dam" 
+                                                                    name="./pillionFrequencyImage"/>
+                                                                <pillionFrequencyDesktopImage
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldLabel="Pillion Frequency Desktop Image"
+                                                                    fieldDescription="Please select image path for pillion frequency Desktop Image." 
+                                                                    rootPath="/content/dam" 
+                                                                    name="./pillionFrequencyDesktopImage"/>       
                                                             </items>
                                                         </column>
                                                     </items>
@@ -143,6 +177,18 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Use Case Ranking"
                                                 name="./question3"/>
+                                             <stepThreeNextButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of next button cta step three"
+                                                fieldLabel="Next Button Cta Label"
+                                                name="./stepThreeNextButtonCtaLabel"/>
+                                            <stepThreeBackButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of back button cta step three"
+                                                fieldLabel="Back Button Cta Label"
+                                                name="./stepThreeBackButtonCtaLabel"/>     
                                             <questionnaire_options_multifield
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
@@ -166,8 +212,17 @@
                                                                 <background-images
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
-                                                                    fieldLabel="Select the background Images"
+                                                                    fieldLabel="Select the Mobile  Image"
+                                                                    fieldDescription="Please select image path for mobile Image." 
+                                                                    rootPath="/content/dam" 
                                                                     name="./images"/>
+                                                                <optionImageForDesktop
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldLabel="Select the Desktop  Image"
+                                                                    fieldDescription="Please select image path for desktop Image." 
+                                                                    rootPath="/content/dam" 
+                                                                    name="./optionImageForDesktop"/>    
                                                             </items>
                                                         </column>
                                                     </items>
@@ -199,6 +254,18 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Preferred Riding Positions"
                                                 name="./question4"/>
+                                            <stepFourNextButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of next button cta step four"
+                                                fieldLabel="Next Button Cta Label"
+                                                name="./stepFourNextButtonCtaLabel"/>
+                                            <stepFourBackButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of back button cta step four"
+                                                fieldLabel="Back Button Cta Label"
+                                                name="./stepFourBackButtonCtaLabel"/>    
                                             <questionnaire_options_multifield
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
@@ -216,9 +283,18 @@
                                                             <items jcr:primaryType="nt:unstructured">
                                                                 <quetionnaire_options
                                                                     jcr:primaryType="nt:unstructured"
-                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
                                                                     fieldLabel="Enter your riding Position Showing Name"
+                                                                    fieldDescription="Please select image path for Riding Position mobile Image." 
+                                                                    rootPath="/content/dam" 
                                                                     name="./ridingPosition"/>
+                                                                <ridingPositionDesktopImage 
+                                                                    jcr:primaryType="nt:unstructured" 
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser" 
+                                                                    fieldDescription="Please select image path for Riding Position Desktop Image." 
+                                                                    fieldLabel="Select Desktop Image" 
+                                                                    name="./ridingPositionDesktopImage" 
+                                                                    rootPath="/content/dam" />    
                                                                 <ridingPositionShowingNameKey
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
@@ -259,6 +335,18 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Perosnal Interest "
                                                 name="./question5"/>
+                                            <stepFiveNextButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of next button cta step five"
+                                                fieldLabel="Next Button Cta Label"
+                                                name="./stepFiveNextButtonCtaLabel"/>
+                                            <stepFiveBackButtonCtaLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter label of back button cta step five"
+                                                fieldLabel="Back Button Cta Label"
+                                                name="./stepFiveBackButtonCtaLabel"/>     
                                         </items>
                                     </column>
                                 </items>

@@ -4,10 +4,13 @@ public class ImageEntity {
     private String text;
     private String backgroundImage;
 
+    private  String optionImageForDesktop;
 
-    public ImageEntity(String text, String backgroundImage){
+
+    public ImageEntity(String text, String backgroundImage,String optionImageForDesktop){
         this.text = text;
         this.backgroundImage = backgroundImage;
+        this.optionImageForDesktop=optionImageForDesktop;
 
 
     }
@@ -27,5 +30,13 @@ public class ImageEntity {
 
     public void setBackgroundImage(String backgroundImage) {
         this.backgroundImage = backgroundImage;
+    }
+
+    public String getOptionImageForDesktop(){
+        return optionImageForDesktop;
+    }
+
+    public void setOptionImageForDesktop(String optionImageForDesktop){
+        this.optionImageForDesktop = optionImageForDesktop;
     }
 }

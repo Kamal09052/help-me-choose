@@ -11,7 +11,7 @@
 
                         <div class="container-basic">
                             <div class="upperside">
-                                <p class="help-me-choose">HELP ME CHOOSE <span>.</span> <span class="steps">Step 1/5</span> </p>
+                                <p class="help-me-choose">HELP ME CHOOSE <span class="steps">Step 1<span>of 5</span></span> </p>
                                 <p class="question">${model.question}</p>
                                 <p class="drag-to-rearrange">Drag to rearrange.</p>
                             </div>
@@ -29,7 +29,7 @@
                                                                 <img src="${model.draggableIcon}" alt="">
                                                             </span>
                                                         </div>
-                                                        ${answers.answers}
+                                                        <p class="section-one-card-heading">${answers.answers}</p>
                                                         <p class="answer-id-box">0${answers.index}</p>
                                                     </div>
                                                     
@@ -47,7 +47,7 @@
 
                             <div class="buttton-container first">
                                 <button type="button" class="next" data-next-section="#section2"
-                                    onclick="storePreferences();">NEXT</button>
+                                    onclick="storePreferences();">${model.stepOneNextButtonCtaLabel}</button>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
 
                     <div id="section2" class="questionnaire-section">
 
-                        <p class="help-me-choose">HELP ME CHOOSE <span>.</span> <span class="steps">Step 2/5</span></p>
+                        <p class="help-me-choose">HELP ME CHOOSE <span class="steps">Step 2<span>of 5</span></span></p>
                         <p class="question">${model.question2}</p>
                         <p class="drag-to-rearrange">
                             Select any one.
@@ -69,18 +69,18 @@
                                         class="option-checkbox">
                                     <label style="cursor: pointer;">${screen2Answer.checkbox}</label>
                                     </div>
-                                    
+
                                     <div class="section-2-selection-img-container">
-                                        <img src="${screen2Answer.pillionFrequencyImage}" alt="pillion-image">
+                                        <img src="${screen2Answer.pillionFrequencyImage}" alt="pillion-image" class="section2-banner-img">
                                     </div>
                                 </li>
 
                             </ul>
                         </div>
                         <div class="buttton-container button-container">
-                            <button type="button" class="prev" data-prev-section="#questionnaire">BACK</button>
+                            <button type="button" class="prev" data-prev-section="#questionnaire">${model.stepTwoBackButtonCtaLabel}</button>
                             <button type="button" id="nextButton" class="next" onclick="checkSelection();"
-                                data-next-section="#section3" disabled>NEXT</button>
+                                data-next-section="#section3" disabled>${model.stepTwoNextButtonCtaLabel}</button>
                         </div>
                     </div>
 
@@ -88,7 +88,7 @@
                     <div id="section3" class="questionnaire-section">
 
                         <div class="upperside">
-                            <p class="help-me-choose">HELP ME CHOOSE . <span class="steps">Step 3/5</span> </p>
+                            <p class="help-me-choose">HELP ME CHOOSE <span class="steps">Step 3<span>of 5</span></span> </p>
                             <p class="question">${model.question3}</p>
                             <p class="drag-to-rearrange">Drag to rearrange.</p>
                         </div>
@@ -123,9 +123,9 @@
 
                         
                             <div class="buttton-container">
-                                <button type="button" class="prev" data-prev-section="#section2">BACK</button>
+                                <button type="button" class="prev" data-prev-section="#section2">${model.stepThreeBackButtonCtaLabel}</button>
                                 <button type="button" class="next" onclick="placeToRide();"
-                                    data-next-section="#section4">NEXT</button>
+                                    data-next-section="#section4">${model.stepThreeNextButtonCtaLabel}</button>
                             </div>
                         
 
@@ -133,7 +133,7 @@
 
 
                     <div id="section4" class="questionnaire-section">
-                        <p class="help-me-choose">HELP ME CHOOSE . <span class="steps">Step 4/5</span> </p>
+                        <p class="help-me-choose">HELP ME CHOOSE <span class="steps">Step 4<span>of 5</span></span> </p>
                         <p class="question">${model.question4}</p>
                         <div class="notification">
                             <button class="close-btn" aria-label="Close">&times;</button>
@@ -143,10 +143,10 @@
                             <sly data-sly-list.authoredImages="${model.ridingPositionImagesURL}">
 
                                 <div class="image-card" data-image-id=${authoredImagesList.index}
-                                    data-sly-attribute.customAttr="${model.ridingPositionImageAttributes[authoredImagesList.index]}">
+                                    data-sly-attribute.customAttr="${authoredImages.ridingPositionShowingNameValue}">
                                     <div class="image-selected-checkbox">
                                         <label>
-                                            <input type="checkbox" name="ridingPosition" value="${model.ridingPositionImageAttributes[authoredImagesList.index]}">${authoredImages.ridingPositionShowingNameValue}
+                                            <input type="checkbox" name="ridingPosition" value="${authoredImages.ridingPositionShowingNameValue}">${authoredImages.ridingPositionShowingNameValue}
                                         </label>
                                     </div>
                                     <div class="img-div">
@@ -164,15 +164,15 @@
                             </sly>
                         </div>
                         <div class="buttton-container">
-                            <button type="button" class="prev" data-prev-section="#section3">BACK</button>
+                            <button type="button" class="prev" data-prev-section="#section3">${model.stepFourBackButtonCtaLabel}</button>
                             <button type="button" class="next riding button-section" data-next-section="#section5"
-                                id="callApiBtn" onclick="getDataFromServlet();" disabled>NEXT</button>
+                                id="callApiBtn" onclick="getDataFromServlet();" disabled>${model.stepFourNextButtonCtaLabel}</button>
                         </div>
                     </div>
 
 
                     <div id="section5" class="questionnaire-section">
-                        <p class="help-me-choose">HELP ME CHOOSE . <span class="steps"> Step 5/5</span></p>
+                        <p class="help-me-choose">HELP ME CHOOSE <span class="steps"> Step 5<span>of 5</span></span></p>
                         <p class="question">${properties.question5}</p>
 
                         <div class="notification">
@@ -194,9 +194,9 @@
                         </div>
                         <div class="buttton-container">
                             <button type="button" class="prev" id="back-button"
-                                data-prev-section="#section4">BACK</button>
+                                data-prev-section="#section4">${model.stepFiveBackButtonCtaLabel}</button>
                             <button type="button" class="next" id="section5Btn"
-                                data-next-section="#main-section" disabled>SUBMIT</button>
+                                data-next-section="#main-section" disabled>${model.stepFiveNextButtonCtaLabel}</button>
                         </div>
                     </div>
                 </div>
@@ -218,10 +218,10 @@
 
 <script id="bike-template" type="text/x-handlebars-template">
     <div class="fixedPart">
-        <h2 class="section-title">Meet your next Royal Enfield motorcycle</h2>
+        <h2 class="section-title">Here are your best suited Royal Enfield motorcycles</h2>
         <div class="bike-tabs">
             {{#each bikes}}
-                <div class="bike-tab" data-bike-id="bike-{{@index}}">{{bikeName}}</div>
+            <div class="bike-tab {{#if @first}}active{{/if}}" data-bike-id="bike-{{@index}}">{{bikeName}}</div>
             {{/each}}
         </div>
        
@@ -277,7 +277,7 @@
             </div>
         {{/each}}
 
-       
+
 
     </div>
     <div class="cta-message">
@@ -298,5 +298,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
