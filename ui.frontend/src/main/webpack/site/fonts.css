@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "GuardianSans";
+    src: url("/etc.clientlibs/mysite/clientlibs/clientlib-site/resources/fonts/GuardianSansSemibold.woff2") format("woff2"),
+         url("/etc.clientlibs/mysite/clientlibs/clientlib-site/resources/fonts/GuardianSansSemibold.woff") format("woff");
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+}
